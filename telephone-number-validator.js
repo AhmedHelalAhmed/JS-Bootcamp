@@ -1,8 +1,8 @@
-const RE2 = /^(1\s?)?\(\d{3}\)\s?\d{3}-\d{4}$/;
-const RE3 = /^(1\s?)?\d{3}(\s|-)?\d{3}(\s|-)?\d{4}$/;
+const RE1 = /^(1\s?)?\(\d{3}\)\s?\d{3}-\d{4}$/;
+const RE2 = /^(1\s?)?\d{3}(\s|-)?\d{3}(\s|-)?\d{4}$/;
 
 
-const REGEXES = [RE2, RE3];
+const REGEXES = [RE1, RE2];
 
 function telephoneCheck(str) {
     for (let regex of REGEXES) {
