@@ -1,7 +1,7 @@
 const RE = /^\d{3}-\d{3}-\d{4}$/;
 const RE2 = /^\(\d{3}\)\s?\d{3}-\d{4}$/;
 const RE4 = /^\d{3}\s?\d{3}\s?\d{4}$/;
-const RE6 = /^1 \d{3} \d{3} \d{4}$/;
+const RE6 = /^1\s\d{3}\s\d{3}\s\d{4}$/;
 
 const REGEXES = [RE, RE2, RE4, RE6];
 
