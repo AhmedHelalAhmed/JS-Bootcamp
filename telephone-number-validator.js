@@ -1,21 +1,12 @@
 const RE = /^\d{3}-\d{3}-\d{4}$/;
-const RE2 = /^\(\d{3}\)\d{3}-\d{4}$/;
-
-const RE3 = /^\(\d{3}\) \d{3}-\d{4}$/;
-
-const RE4 = /^\d{3} \d{3} \d{4}$/;
-
-
-const RE5 = /^\d{10}$/;
-
+const RE2 = /^\(\d{3}\)\s?\d{3}-\d{4}$/;
+const RE4 = /^\d{3}\s?\d{3}\s?\d{4}$/;
 const RE6 = /^1 \d{3} \d{3} \d{4}$/;
 
 function telephoneCheck(str) {
     return RE.test(str) ||
         RE2.test(str) ||
-        RE3.test(str) ||
         RE4.test(str) ||
-        RE5.test(str) ||
         RE6.test(str);
 }
 
