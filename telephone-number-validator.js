@@ -3,12 +3,7 @@ const RE2 = /^(1\s?)?\(\d{3}\)\s?\d{3}-\d{4}$/;
 const RE4 = /^(1\s?)?\d{3}\s?\d{3}\s?\d{4}$/;
 
 
-
-const RE6 = /^1\s\d{3}\s\d{3}\s\d{4}$/;
-const RE7 = /^1\s\d{3}-\d{3}-\d{4}$/;
-const RE8 = /^1\s?\(\d{3}\)\s?\d{3}-\d{4}$/;
-
-const REGEXES = [RE, RE2, RE4, RE6, RE7, RE8];
+const REGEXES = [RE, RE2, RE4];
 
 function telephoneCheck(str) {
     for (let regex of REGEXES) {
