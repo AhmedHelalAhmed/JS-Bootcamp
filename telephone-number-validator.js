@@ -3,11 +3,15 @@ const RE2 = /^\(\d{3}\)\s?\d{3}-\d{4}$/;
 const RE4 = /^\d{3}\s?\d{3}\s?\d{4}$/;
 const RE6 = /^1 \d{3} \d{3} \d{4}$/;
 
+const REGEXES = [RE, RE2, RE4, RE6];
+
 function telephoneCheck(str) {
-    return RE.test(str) ||
-        RE2.test(str) ||
-        RE4.test(str) ||
-        RE6.test(str);
+    for (let regex of REGEXES) {
+        if (regex.test(str)) {
+            return true;
+        }
+    }
+    return false;
 }
 
 // telephoneCheck("555-555-5555");
