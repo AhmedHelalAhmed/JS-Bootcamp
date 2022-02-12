@@ -1,9 +1,14 @@
-const RE = /^\d{3}-\d{3}-\d{4}$/;
-const RE2 = /^\(\d{3}\)\s?\d{3}-\d{4}$/;
-const RE4 = /^\d{3}\s?\d{3}\s?\d{4}$/;
-const RE6 = /^1\s\d{3}\s\d{3}\s\d{4}$/;
+const RE = /^(1\s?)?\d{3}-\d{3}-\d{4}$/;
+const RE2 = /^(1\s?)?\(\d{3}\)\s?\d{3}-\d{4}$/;
+const RE4 = /^(1\s?)?\d{3}\s?\d{3}\s?\d{4}$/;
 
-const REGEXES = [RE, RE2, RE4, RE6];
+
+
+const RE6 = /^1\s\d{3}\s\d{3}\s\d{4}$/;
+const RE7 = /^1\s\d{3}-\d{3}-\d{4}$/;
+const RE8 = /^1\s?\(\d{3}\)\s?\d{3}-\d{4}$/;
+
+const REGEXES = [RE, RE2, RE4, RE6, RE7, RE8];
 
 function telephoneCheck(str) {
     for (let regex of REGEXES) {
@@ -21,3 +26,11 @@ console.log(telephoneCheck("(555) 555-5555"));
 console.log(telephoneCheck("555 555 5555"));
 console.log(telephoneCheck("5555555555"));
 console.log(telephoneCheck("1 555 555 5555"));
+console.log(telephoneCheck("1 555-555-5555"));
+console.log(telephoneCheck("1 (555) 555-5555"));
+console.log(telephoneCheck("5555555555"));
+console.log(telephoneCheck("555-555-5555"));
+console.log(telephoneCheck("(555)555-5555"));
+console.log(telephoneCheck("1(555)555-5555"));
+console.log(telephoneCheck("1 555 555 5555"));
+console.log(telephoneCheck("1 456 789 4444"));
